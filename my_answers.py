@@ -95,7 +95,7 @@ class NeuralNetwork(object):
         error = y - final_outputs # Output layer error is the difference between desired target and actual output.
         
         # TODO: Calculate the hidden layer's contribution to the error
-        hidden_error = (self.activation_function(hidden_outputs)*(1-self.activation_function(hidden_outputs)))
+        hidden_error = hp(hidden_outputs)
         
         # TODO: Backpropagated error terms - Replace these values with your calculations.
         output_error_term = np.multiply(error,hp(out_in))
